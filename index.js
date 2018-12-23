@@ -6,6 +6,7 @@ async function run() {
   
   await page.goto('https://github.com');
   await page.screenshot({ path: 'screenshots/github.png' });
+  await page.pdf({path: 'screenshots/hn.pdf', format: 'A4'});
   
   browser.close();
 }
